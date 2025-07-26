@@ -1,24 +1,24 @@
 package com.org.ElearnigProject.dto;
 
-import com.org.ElearnigProject.enums.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class userdto {
+public class VideoAccessDTO {
     private UUID id;
-    private String firstName;
-    private String lastName;
-    private String email;
-    private Role role;
-    private LocalDate registrationDate;
+    private UUID userId;
+    private String userEmail;
+    private UUID videoId;
+    private String videoTitle;
+    private LocalDateTime grantedAt;
+    private UUID paymentRequestId;
     private boolean isActive;
 }
