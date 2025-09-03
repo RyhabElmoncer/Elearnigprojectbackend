@@ -29,7 +29,7 @@ public class CategoryController {
         return ResponseEntity.ok(categoryService.getCategoryById(id));
     }
 
-    @PostMapping
+    @PostMapping ("/ajouter")
     @PreAuthorize("hasAuthority('ADMIN')")
     public ResponseEntity<CategoryDTO> createCategory(@RequestBody CreateCategoryRequest request) {
         return new ResponseEntity<>(categoryService.createCategory(request), HttpStatus.CREATED);
